@@ -21,6 +21,7 @@ namespace CPW211_UnitTestStarterCode
 
         public static double Subtract(double a, double b)
         {
+           
             double difference = a - b;
             return difference; 
         }
@@ -33,6 +34,10 @@ namespace CPW211_UnitTestStarterCode
 
         public static double Divide(double a, double b)
         {
+            if (b == 0)
+            {
+                throw new ArgumentException("Denominator cannot be zero");
+            }
             double dividend = a / b;
             return dividend;
         }
